@@ -1,0 +1,8 @@
+CREATE TABLE deposit IF NOT EXISTS (
+    id SERIAL PRIMARY KEY AUTOINCREMENT,
+    location_id VARCHAR(50) NOT NULL,
+    item_sku VARCHAR(50) NOT NULL,
+    quantity INTEGER NOT NULL,
+    deposit_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    processed BOOLEAN DEFAULT FALSE
+);
